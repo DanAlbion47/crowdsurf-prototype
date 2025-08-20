@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrowdSurf Demo – Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="admin-container">
+    <h2>Admin Panel</h2>
+    <label for="admin-password">Set universal password</label>
+    <input type="password" id="admin-password" placeholder="New password" />
+    <button id="password-save">Save Password</button>
+    <label for="video-url">Event video URL (YouTube or direct)</label>
+    <input type="text" id="video-url" placeholder="https://..." />
+    <button id="video-save">Save Video URL</button>
+    <label for="sim-crowd-toggle" style="display:flex; align-items:center; gap:8px;">
+      <input type="checkbox" id="sim-crowd-toggle" /> Show simulated crowd
+    </label>
+    <label for="crowd-size">Simulated crowd size</label>
+    <input type="number" id="crowd-size" min="0" max="500" />
+    <button id="settings-save">Save Settings</button>
+    <button id="reset-btn" style="background:#e05656;">Reset Demo</button>
+  </div>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

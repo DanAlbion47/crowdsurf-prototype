@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrowdSurf Demo – Onboarding</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="onboarding-container">
+    <div id="slides">
+      <div class="onboarding-slide" data-index="0">
+        <h2>Find friends in the crowd</h2>
+        <p>Connect with fans and share the moment together.</p>
+      </div>
+      <div class="onboarding-slide" data-index="1" style="display:none;">
+        <h2>Build your own watchrooms</h2>
+        <p>Create private spaces to watch and chat with friends.</p>
+      </div>
+      <div class="onboarding-slide" data-index="2" style="display:none;">
+        <h2>Be part of the future</h2>
+        <p>Experience live events like never before.</p>
+      </div>
+      <div class="onboarding-slide" data-index="3" style="display:none;">
+        <h2>Let's get to know you</h2>
+        <p>Enter your name to personalise your profile.</p>
+        <input type="text" id="name-input" placeholder="Your name" style="width:100%; padding:12px; border-radius:8px; border:none; margin-top:12px; background:#1f1433; color:#fff;" />
+      </div>
+    </div>
+    <div class="onboarding-pagination" id="pagination"></div>
+    <div style="margin-top:auto; width:100%; display:flex; justify-content:space-between; padding:0 12px;">
+      <button id="skip-btn" style="background:none; border:none; color:#7b3fe4; font-size:0.9rem;">Skip</button>
+      <button id="next-btn" class="gradient-button" style="margin-left:auto;">Next</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="onboarding.js"></script>
+</body>
+</html>

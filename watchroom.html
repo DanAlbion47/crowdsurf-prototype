@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrowdSurf Demo – Watchroom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="event-container">
+    <div class="event-video" style="height:45vh;">
+      <div class="video-controls" id="wr-video-controls">
+        <div class="control-btn" id="wr-my-camera-thumb"></div>
+        <div class="control-btn" id="wr-toggle-video-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/727/727240.png" alt="camera" style="width:20px;height:20px;filter:invert(1);" />
+        </div>
+        <div class="control-btn" id="wr-toggle-audio-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/727/727228.png" alt="microphone" style="width:20px;height:20px;filter:invert(1);" />
+        </div>
+        <div class="control-btn" id="wr-fullscreen-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/149/149852.png" alt="fullscreen" style="width:20px;height:20px;filter:invert(1);" />
+        </div>
+      </div>
+      <iframe id="wr-event-video-player" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <!-- Toast for invites and notifications -->
+    <div id="wr-toast" class="toast"></div>
+    <!-- Watchroom grid -->
+    <div style="flex:1; overflow-y:auto; background:#0f0722; padding:16px;" id="watchroom-grid-container">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+        <span id="watchroom-header" style="font-weight:600;">Your watchroom</span>
+        <button id="collapse-btn" style="background:none; border:none; color:#7b3fe4; font-size:1.2rem;">∧</button>
+      </div>
+      <div id="watchroom-grid" style="display:grid; grid-template-columns: repeat(auto-fill, 80px); gap:8px;"></div>
+    </div>
+  </div>
+  <div class="bottom-nav">
+    <img src="https://cdn-icons-png.flaticon.com/512/8143/8143888.png" class="nav-icon" id="wr-nav-home" alt="home" />
+    <img src="https://cdn-icons-png.flaticon.com/512/3581/3581780.png" class="nav-icon" id="wr-nav-watchroom" alt="watchroom" />
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561184.png" class="nav-icon" id="wr-nav-chat" alt="chat" />
+  </div>
+
+  <!-- Profile modal reused for watchroom participants -->
+  <div id="wr-profile-modal" class="modal-overlay" style="display:none;">
+    <div class="modal" id="wr-profile-content"></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="watchroom.js"></script>
+</body>
+</html>
