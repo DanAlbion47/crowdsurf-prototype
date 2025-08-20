@@ -70,12 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.appendChild(badge);
         cell.addEventListener('click', () => openProfile(participants[i]));
       } else {
-        // Show plus icon
+        // Show plus icon with gradient background matching the brand
+        const plusWrap = document.createElement('div');
+        plusWrap.style.position = 'absolute';
+        plusWrap.style.top = '0';
+        plusWrap.style.right = '0';
+        plusWrap.style.bottom = '0';
+        plusWrap.style.left = '0';
+        plusWrap.style.borderRadius = '8px';
+        plusWrap.style.display = 'flex';
+        plusWrap.style.justifyContent = 'center';
+        plusWrap.style.alignItems = 'center';
+        plusWrap.style.background = 'linear-gradient(135deg, #7b3fe4, #2fb9ff)';
         const plus = document.createElement('span');
         plus.textContent = '+';
         plus.style.fontSize = '2rem';
-        plus.style.color = '#7b3fe4';
-        cell.appendChild(plus);
+        plus.style.color = '#fff';
+        plusWrap.appendChild(plus);
+        cell.appendChild(plusWrap);
         cell.addEventListener('click', () => inviteUser());
       }
       watchroomGrid.appendChild(cell);
