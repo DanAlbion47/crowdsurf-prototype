@@ -225,11 +225,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hex-grid {
+  /* Horizontal scrolling crowd grid to match the Figma design */
   flex: 1;
-  overflow-y: auto;
+  /* enable horizontal scroll and hide vertical scroll */
+  overflow-x: auto;
+  overflow-y: hidden;
   padding: 12px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  /* use flexbox instead of CSS grid so cells lay out left‑to‑right */
+  display: flex;
   gap: 8px;
 }
 
